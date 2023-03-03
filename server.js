@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
-import moviesRouter from './src/routes/movies.routes.js'
+import usersRouter from './src/routes/users.routes.js'
 import commentsRouter from './src/routes/comments.routes.js'
 
 dotenv.config();
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 //!----ROUTES----
-app.use('/movies', moviesRouter);
+app.use('/users', usersRouter);
 
 app.use('/comments', commentsRouter);
 

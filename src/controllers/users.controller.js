@@ -1,4 +1,4 @@
-import * as movieModel from '../models/movies.model.js'
+import * as movieModel from '../models/users.model.js'
 
 export async function getAll(req, res) {
     // res.send(await User.find());

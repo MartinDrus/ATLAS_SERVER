@@ -1,26 +1,22 @@
 import { Router } from "express";
-import * as movieController from '../controllers/movies.controller.js'
+import * as userController from '../controllers/users.controller.js'
+
+const usersRouter = new Router();
+
+usersRouter.route('/')
+    .get(userController.getAll)
+
+usersRouter.route('/update/:id')
+    .patch(userController.updateMovieData)
+
+usersRouter.route('/searchbyid/:id')
+    .get(userController.getMovieById)
+
+usersRouter.route('/searchbytitle/:title')
+    .get(userController.getMovieByTitle)
+
+usersRouter.route('/delete/:id')
+    .delete(userController.deleteMovie)
 
 
-
-
-
-const moviesRouter = new Router();
-
-moviesRouter.route('/')
-    .get(movieController.getAll)
-
-moviesRouter.route('/update/:id')
-    .patch(movieController.updateMovieData)
-
-moviesRouter.route('/searchbyid/:id')
-    .get(movieController.getMovieById)
-
-moviesRouter.route('/searchbytitle/:title')
-    .get(movieController.getMovieByTitle)
-
-moviesRouter.route('/delete/:id')
-    .delete(movieController.deleteMovie)
-
-
-export default moviesRouter;
+export default usersRouter;
