@@ -1,5 +1,9 @@
 import * as movieModel from '../models/users.model.js'
 
+export async function getHome(req, res) {
+    res.send("Hallo am Start")
+}
+
 export async function getMovieById(req, res) {
    
     try {
