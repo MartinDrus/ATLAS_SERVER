@@ -7,7 +7,7 @@ import usersRouter from './src/routes/users.routes.js'
 import commentsRouter from './src/routes/comments.routes.js'
 
 dotenv.config();
-const PORT = process.env.API_PORT;
+const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 app.use(cors());
