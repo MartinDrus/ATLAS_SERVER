@@ -1,14 +1,5 @@
 import * as movieModel from '../models/users.model.js'
 
-export async function getAll(req, res) {
-    // res.send(await User.find());
-
-    let allMovies = await movieModel.getAll();
-    console.log("🚀 ~ file: movies.controller.js:7 ~ getAll ~ allMovies:", allMovies)
-
-    res.send(allMovies);
-}
-
 export async function getMovieById(req, res) {
    
     try {
