@@ -3,8 +3,7 @@ import * as userController from '../controllers/users.controller.js'
 
 const usersRouter = new Router();
 
-usersRouter.route('/')
-    .get(userController.getAll)
+
 
 usersRouter.route('/update/:id')
     .patch(userController.updateMovieData)
